@@ -32,6 +32,6 @@ mongoose
   .then(() => console.log('Connection to database is successfull!'));
 
 // SERVER START
-app.listen(process.env.PORT || PORT, HOSTNAME, () => {
-  console.log(`Server is running on port ${PORT} and addressed to ${HOSTNAME}`);
+app.listen(process.env.PORT || PORT, hostname () => {
+  console.log(`Server is running on port ${PORT} and addressed to ${hostname}`);
 });
