@@ -33,5 +33,5 @@ mongoose
 
 // SERVER START
 app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server is running on port ${PORT} and addressed to ${hostname}`);
+  console.log(`Server is running on port ${PORT} and addressed to`);
 });
