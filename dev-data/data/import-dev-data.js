@@ -16,7 +16,7 @@ const DB = process.env.DATABASE.replace(
 //   process.env.DATABASE_PASSWORD
 // );
 (async () => {
-  console.log(DB);
+  // console.log(DB);
   await mongoose
     .connect(DB, {
       useNewUrlParser: true,

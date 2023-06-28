@@ -58,7 +58,7 @@ reviewSchema.statics.calcAverageRatings = async function (garageId) {
       },
     },
   ]);
-  console.log(stat);
+  // console.log(stat);
 
   await Garages.findByIdAndUpdate(garageId, {
     ratingsQuantity: stat[0].nRatings,

@@ -21,7 +21,7 @@ exports.addUser = catchAsync(async (request, response, next) => {
       name,
       password,
     });
-    console.log(error);
+    // console.log(error);
     if (error) return next(new AppError('Validation Failed!', 404));
 
     const oldUser = await Users.find({

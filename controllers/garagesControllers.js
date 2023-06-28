@@ -39,7 +39,7 @@ exports.aliasGarages = async (request, response, next) => {
     request.query.sort = '-createdAt';
   }
   if (subUrl.url.includes('three-vehicle-only')) {
-    console.log('Inside thre');
+    // console.log('Inside thre');
     request.query.categories = 'Three Wheeler';
   }
   if (subUrl.url.includes('four-vehicle-only')) {
@@ -51,7 +51,7 @@ exports.aliasGarages = async (request, response, next) => {
 exports.getGaragesWithin = catchAsync(async (request, response, next) => {
   const { distance, latlng, unit, subCat } = request.params;
   const [lat, lng] = latlng.split(',');
-  console.log(distance, latlng, unit, subCat);
+  // console.log(distance, latlng, unit, subCat);
   const radius = unit === 'mi' ? distance / 3963.2 : distance / 6378.1;
   if (!lat && !lng) {
     return next(
@@ -66,7 +66,7 @@ exports.getGaragesWithin = catchAsync(async (request, response, next) => {
     request.query.sort = '-ratingsAverage';
   }
   if (subCat.includes('newly-added')) {
-    console.log('Inside at newly');
+    // console.log('Inside at newly');
     request.query.sort = '-createdAt';
   }
   if (subCat.includes('three-wheeler-only')) {
